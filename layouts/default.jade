@@ -5,7 +5,8 @@ head
     link(rel='stylesheet', href='/css/styles.css')
 body
     header
-        h1= __('Cookbook')
+        - var url = locale === defaultLocale ? '/' : `/${locale}/`;
+        h1: a(href=url)= __('Cookbook')
     main: article
         - var availableLocales = locales.filter(x => x !== locale && !!lang(x));
         if availableLocales

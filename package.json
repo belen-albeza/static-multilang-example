@@ -1,0 +1,29 @@
+{
+  "name": "static-multilang-example",
+  "version": "1.0.0",
+  "description": "example of a multi-language static site with metalsmith",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belen-albeza/static-multilang-example.git"
+  },
+  "keywords": [
+    "metalsmith"
+  ],
+  "author": "Belén \"Benko\" Albeza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/belen-albeza/static-multilang-example/issues"
+  },
+  "homepage": "https://github.com/belen-albeza/static-multilang-example#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-layouts": "^1.4.2",
+    "metalsmith-markdown": "^0.2.1"
+  }
+}

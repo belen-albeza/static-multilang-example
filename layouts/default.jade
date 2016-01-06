@@ -1,19 +1,20 @@
 doctype html
 head
-    title Cookbook - #{title}
+    title #{__('Cookbook')} - #{title}
     meta(charset='utf-8')
     link(rel='stylesheet', href='/css/styles.css')
 body
     header
-        h1 Cookbook
+        h1= __('Cookbook')
     main: article
         - var availableLocales = locales.filter(x => x !== locale && !!lang(x));
         if availableLocales
-            p.translations Also available in#{' '}
+            p.translations #{__('Also available in') + ' '}
                 each lc, index in availableLocales
-                    a(href=`/${lang(lc).path}`)= lc
+                    a(href=`/${lang(lc).path}`)= __(lc)
                     if index < availableLocales.length - 1
                         |,#{' '}
                 |.
         h1= title
         != contents
+        block extra

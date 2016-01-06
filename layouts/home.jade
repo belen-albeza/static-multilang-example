@@ -1,0 +1,8 @@
+extends ./default.jade
+
+block extra
+    h2= __('Recipes')
+
+    ul
+        each recipe in collections[`recipes_${locale}`]
+            li: a(href=`/${recipe.path}`)= recipe.title
